@@ -1,6 +1,6 @@
 #' @rdname nb_ets
 #' @export
-nb_ets <- function(data,freq,con = con,db="aiops",predlenth,force_positive=FALSE,debug=FALSE){
+nb_ets <- function(data,freq,con,db,predlenth,force_positive=FALSE,debug=FALSE){
   t_pre <- 0
   t_ets <- 0
   t_write <- 0
@@ -30,8 +30,8 @@ nb_ets <- function(data,freq,con = con,db="aiops",predlenth,force_positive=FALSE
     }
     output <- cbind(output,series_tags) 
     t3 = Sys.time()
-    influx_write(con = con, 
-                 db = “aiops”,
+    influx_write(con , 
+                 db = "aiops",
                  x = output,
                  time_col = "time", 
                  tag_cols = colnames(output)[-c(1:4)],
