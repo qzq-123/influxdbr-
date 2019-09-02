@@ -31,7 +31,7 @@ nb_ets <- function(data,freq,db="aiops",predlenth,force_positive=FALSE,debug=FAL
     output <- cbind(output,series_tags) 
     t3 = Sys.time()
     influx_write(con = con, 
-                 db = db,
+                 db = “aiops”,
                  x = output,
                  time_col = "time", 
                  tag_cols = colnames(output)[-c(1:4)],
