@@ -1,6 +1,6 @@
 #' @rdname nb_ets
 #' @export
-nb_ets <- function(data,freq,db="aiops",predlenth,force_positive=FALSE,debug=FALSE){
+nb_ets <- function(data,freq,con = con,db="aiops",predlenth,force_positive=FALSE,debug=FALSE){
   t_pre <- 0
   t_ets <- 0
   t_write <- 0
