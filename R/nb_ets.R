@@ -1,6 +1,6 @@
 #' @rdname nb_ets
 #' @export
-nb_ets <- function(data,freq,predlenth,force_positive=FALSE,debug=FALSE){
+nb_ets <- function(data,freq,db,predlenth,force_positive=FALSE,debug=FALSE){
   t_pre <- 0
   t_ets <- 0
   t_write <- 0
